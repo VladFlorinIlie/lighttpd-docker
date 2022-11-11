@@ -1,11 +1,9 @@
 # Dockerfile for lighttpd
 
-FROM alpine
-
-ENV LIGHTTPD_VERSION=1.4.64-r0
+FROM alpine:3.15
 
 RUN apk add --update --no-cache \
-	lighttpd=${LIGHTTPD_VERSION} \
+	lighttpd \
 	lighttpd-mod_auth \
 	php7-common \
 	php7-session \
